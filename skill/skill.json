@@ -1,0 +1,21 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Ferry Time"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "distributionCountries": ["US"]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:237670140500:function:ferrytime-dev-dispatch"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

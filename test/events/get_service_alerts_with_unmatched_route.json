@@ -1,0 +1,66 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": true,
+        "sessionId": "amzn1.echo-api.session.424df595-1ad8-486b-a58f-022fad394bec",
+        "application": {
+            "applicationId": "amzn1.ask.skill.6379802c-0722-48b1-8c97-a091e4773d1c"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.AG3VBAL6S3D7VY3IB6RYVMEVWY7VVSIUR4MB7K5LEZLLQZDWXXKCXEYISMW5SKLDMNEQL4ZA4KGDDPDZM63SMQ2IEQPA7NOM2YKM3BYIY36HV6HUYPS5EJR4B3IK3XFOKI7SRCAJLMGMGTLCQR67VQTDR7G5CRXMXAYGD3ULFBY7UCILXEQ463BZWVJTPXAOK7Q745S237LOITQ"
+        }
+    },
+    "context": {
+        "AudioPlayer": {
+            "playerActivity": "IDLE"
+        },
+        "Display": {},
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.6379802c-0722-48b1-8c97-a091e4773d1c"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.AG3VBAL6S3D7VY3IB6RYVMEVWY7VVSIUR4MB7K5LEZLLQZDWXXKCXEYISMW5SKLDMNEQL4ZA4KGDDPDZM63SMQ2IEQPA7NOM2YKM3BYIY36HV6HUYPS5EJR4B3IK3XFOKI7SRCAJLMGMGTLCQR67VQTDR7G5CRXMXAYGD3ULFBY7UCILXEQ463BZWVJTPXAOK7Q745S237LOITQ"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.AFZID5RBY4CFOKMNWQXPXKK6HV44KJO77I475O5LNGCOW7FKUJSPXIXDGVYIUMX7ZT4V4I7LBL54ZTBBM7VY5RHLNA3RC7NPYV7O4D2X3C2DS6CRJIERX5MGDJWYN5KRU3WBPYEQ3I5URC3RZPSRQTFU4IPA",
+                "supportedInterfaces": {
+                    "AudioPlayer": {},
+                    "Display": {
+                        "templateVersion": "1.0",
+                        "markupVersion": "1.0"
+                    }
+                }
+            },
+            "apiEndpoint": "https://api.amazonalexa.com",
+            "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjYzNzk4MDJjLTA3MjItNDhiMS04Yzk3LWEwOTFlNDc3M2QxYyIsImV4cCI6MTUyNTA1MjIxMCwiaWF0IjoxNTI1MDQ4NjEwLCJuYmYiOjE1MjUwNDg2MTAsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUZaSUQ1UkJZNENGT0tNTldRWFBYS0s2SFY0NEtKTzc3STQ3NU81TE5HQ09XN0ZLVUpTUFhJWERHVllJVU1YN1pUNFY0STdMQkw1NFpUQkJNN1ZZNVJITE5BM1JDN05QWVY3TzREMlgzQzJEUzZDUkpJRVJYNU1HREpXWU41S1JVM1dCUFlFUTNJNVVSQzNSWlBTUlFURlU0SVBBIiwidXNlcklkIjoiYW16bjEuYXNrLmFjY291bnQuQUczVkJBTDZTM0Q3VlkzSUI2UllWTUVWV1k3VlZTSVVSNE1CN0s1TEVaTExRWkRXWFhLQ1hFWUlTTVc1U0tMRE1ORVFMNFpBNEtHRERQRFpNNjNTTVEySUVRUEE3Tk9NMllLTTNCWUlZMzZIVjZIVVlQUzVFSlI0QjNJSzNYRk9LSTdTUkNBSkxNR01HVExDUVI2N1ZRVERSN0c1Q1JYTVhBWUdEM1VMRkJZN1VDSUxYRVE0NjNCWldWSlRQWEFPSzdRNzQ1UzIzN0xPSVRRIn19.BhS3exAI8kcenH-XObZ6HZFzQjl992i_kQA6DdfGqsfzGpROCAD9tvsJeW2LvvV2viie8PjFhKQbA8rTiwiuw9oPbiQaBJXOi_JhIj7DqOvBKlyjrmoj3bLtBTG4BiBO4mTsnOX2A_S8NOqARYqwKd86eAOPGZw1HvhQua5VlxI-pXND6s8rzllsJM7RGW9jCetbz7L5XVCZ0NrvT2T7S-fjOW42DQQJTUDmMDKkKlYc3AUoT5lbfbDjrZtYaAbvY5PkUx6gej-CFxwqLKF3D3vLt6LNmE8cNVGFz_UtBCS0N6QXZoMFZwcQMftVCZpEZznR9mhy8jjk_C-NJCUVqQ"
+        }
+    },
+    "request": {
+        "type": "IntentRequest",
+        "requestId": "amzn1.echo-api.request.459f7987-023c-47c5-818e-267d4b90860d",
+        "timestamp": "2018-04-30T00:36:50Z",
+        "locale": "en-US",
+        "intent": {
+            "name": "GetServiceAlertsIntent",
+            "confirmationStatus": "NONE",
+            "slots": {
+                "Route": {
+                    "name": "Route",
+                    "value": "the Astoria ferry",
+                    "resolutions": {
+                        "resolutionsPerAuthority": [
+                            {
+                                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.6379802c-0722-48b1-8c97-a091e4773d1c.Route",
+                                "status": {
+                                    "code": "ER_SUCCESS_NO_MATCH"
+                                }
+                            }
+                        ]
+                    },
+                    "confirmationStatus": "NONE"
+                }
+            }
+        }
+    }
+}
