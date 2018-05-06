@@ -3,8 +3,7 @@
         "invocation_words": ["ask"],
         "connecting_words": ["for", "about"],
         "utterances": [
-            "service alerts",
-            "the service alerts"
+            "?[the] service alerts"
         ]
     },
     {
@@ -18,19 +17,11 @@
         "invocation_words": ["ask"],
         "connecting_words": ["if", "whether"],
         "utterances": [
-            "there are service alerts",
-            "there are any service alerts",
-            "there are some service alerts",
-            "it has service alerts",
-            "it has any service alerts",
-            "it has some service alerts",
-            "it knows of service alerts",
-            "it knows of any service alerts",
-            "it found service alerts",
-            "it found any service alerts",
-            "we have service alerts",
-            "we have any service alerts",
-            "we have some service alerts"
+            "there are ?[any|some] service alerts",
+            "it has ?[any|some] service alerts",
+            "it knows of ?[any] service alerts",
+            "it found ?[any] service alerts",
+            "we have ?[any|some] service alerts"
         ]
     },
     {

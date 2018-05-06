@@ -8,6 +8,7 @@ from invoke import task
 from ask import AskCli
 
 BASE_MODELS_DIR = "skill/models"
+UTTERANCE_TEMPLATE_PATTERN = re.compile(r"\??\[([-a-zA-Z. _'\|]*)\]")
 
 
 @task
@@ -85,11 +86,13 @@ def create_intent(intent_name, intents_dir):
 
 def make_intent_samples(intent_dir, config_files):
     utterance_set = set()
+    utterance_configs = []
     for config_file in config_files:
         with open(f"{intent_dir}/{config_file}", "rb") as f:
-            utterance_configs = json.load(f)
+            utterance_configs.extend(json.load(f))
     for utterance_config in utterance_configs:
-        utterance_set.update(utterance_config.get("utterances", []))
+        for utterance_string in utterance_config.get("utterances", []):
+            utterance_set.update(render_utterances(utterance_string))
     return list(utterance_set)
 
 
@@ -103,8 +106,6 @@ def render_utterances(template_string):
         return "{}"
 
     # match [...] or ?[...], capture text between brackets
-    pattern = r"\??\[([-a-zA-Z. _'\|]*)\]"
-    base_string = re.sub(pattern, sub_for_interpolation, template_string)
-
+    base_string = UTTERANCE_TEMPLATE_PATTERN.sub(sub_for_interpolation, template_string)
     combinations = [base_string.format(*combo) for combo in itertools.product(*matches)]
     return [" ".join(string.split()) for string in combinations]
