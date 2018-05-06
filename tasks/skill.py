@@ -25,11 +25,6 @@ def simulate(c, text):
 
 
 @task
-def build(c):
-    print("Building")
-
-
-@task
 def build_models(c):
     models = [model for model in os.listdir(BASE_MODELS_DIR) if os.path.isdir(os.path.join(BASE_MODELS_DIR, model))]
     for model in models:
