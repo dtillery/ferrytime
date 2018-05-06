@@ -7,6 +7,7 @@ name = "pypi"
 alexandra = "*"
 
 [dev-packages]
+invoke = "*"
 
 [requires]
 python_version = "3.6"

@@ -3,9 +3,10 @@ import subprocess
 
 class AskCli:
 
-    def __init__(self, skill_id=None, locale="en-US"):
+    def __init__(self, skill_id=None, locale="en-US", skill_dir=None):
         self.skill_id = skill_id
         self.locale = locale
+        self.skill_dir = skill_dir
 
     @property
     def _cmd_base(self):
@@ -21,7 +22,7 @@ class AskCli:
 
     def simulate(self, text):
         cmd = self._make_cmd(text)
-        process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, cwd=self.skill_dir)
         return AlexaSimulateResponse(process)
 
 

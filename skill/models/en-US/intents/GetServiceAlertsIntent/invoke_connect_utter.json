@@ -1,0 +1,73 @@
+[
+    {
+        "invocation_words": ["ask"],
+        "connecting_words": ["for", "about"],
+        "utterances": [
+            "service alerts",
+            "the service alerts"
+        ]
+    },
+    {
+        "invocation_words": ["ask"],
+        "connecting_words": ["to"],
+        "utterances": [
+            "get its service alerts"
+        ]
+    },
+    {
+        "invocation_words": ["ask"],
+        "connecting_words": ["if", "whether"],
+        "utterances": [
+            "there are service alerts",
+            "there are any service alerts",
+            "there are some service alerts",
+            "it has service alerts",
+            "it has any service alerts",
+            "it has some service alerts",
+            "it knows of service alerts",
+            "it knows of any service alerts",
+            "it found service alerts",
+            "it found any service alerts",
+            "we have service alerts",
+            "we have any service alerts",
+            "we have some service alerts"
+        ]
+    },
+    {
+        "invocation_words": ["ask"],
+        "connecting_words": [],
+        "utterances": [
+            "what service alerts are there",
+            "what service alerts there are",
+            "how many service alerts are there",
+            "how many service alerts there are",
+            "which service alerts there are",
+            "which service alerts are there"
+        ]
+    },
+    {
+        "invocation_words": ["tell"],
+        "connecting_words": ["to", "that"],
+        "utterances": []
+    },
+    {
+        "invocation_words": ["tell"],
+        "connecting_words": [],
+        "utterances": []
+    },
+    {
+        "invocation_words": ["search", "open"],
+        "connecting_words": ["for"],
+        "utterances": []
+    },
+    {
+        "invocation_words": ["talk to", "open", "launch", "start", "resume", "run", "load", "begin"],
+        "connecting_words": ["and"],
+        "utterances": []
+    },
+    {
+        "invocation_words": ["use"],
+        "connecting_words": ["and", "to"],
+        "utterances": []
+    }
+]
