@@ -88,7 +88,7 @@ def make_intent_samples(intent_dir, config_files):
     for utterance_config in utterance_configs:
         for utterance_string in utterance_config.get("utterances", []):
             utterance_set.update(render_utterances(utterance_string))
-    return list(utterance_set)
+    return sorted(list(utterance_set))
 
 
 def render_utterances(template_string):
