@@ -11,14 +11,14 @@ BASE_MODELS_DIR = "skill/models"
 @task
 def simulate(c, text):
     alexa = AskCli(skill_dir="skill")
-    print("=== Simulating: \"{}\"".format(text))
+    print(f"=== Simulating: \"{text}\"")
     r = alexa.simulate(text)
     if not r.successful:
-        print("Simulation failed: {}".format(r.error_message))
+        print(f"Simulation failed: {r.error_message}")
     else:
         print("=== Simulation Results:")
-        print("Intent: {}".format(r.intent.name))
-        print("Slots: {}".format(r.intent.slots))
+        print(f"Intent: {r.intent.name}")
+        print(f"Slots: {r.intent.slots}")
 
 
 @task
@@ -34,27 +34,27 @@ def build_models(c):
 
 
 def build_model(model):
-    model_dir = "{}/{}".format(BASE_MODELS_DIR, model)
+    model_dir = f"{BASE_MODELS_DIR}/{model}"
 
-    with open("{}/base.json".format(model_dir), "rb") as f:
+    with open(f"{model_dir}/base.json", "rb") as f:
         model_config = json.load(f)
 
     model_config = add_types(model_config, model_dir)
     model_config = add_intents(model_config, model_dir)
 
-    with open("{}/{}.json".format(BASE_MODELS_DIR, model), "w") as f:
+    with open(f"{BASE_MODELS_DIR}/{model}.json", "w") as f:
         json.dump(model_config, f, indent=2)
 
 
 def add_types(model_config, model_dir):
-    with open("{}/types.json".format(model_dir), "rb") as f:
+    with open(f"{model_dir}/types.json", "rb") as f:
         types_config = json.load(f)
     model_config["interactionModel"]["languageModel"]["types"] = types_config
     return model_config
 
 
 def add_intents(model_config, model_dir):
-    intents_dir = "{}/intents".format(model_dir)
+    intents_dir = f"{model_dir}/intents"
     intents = []
     if os.path.isdir(intents_dir):
         intent_names = os.listdir(intents_dir)
@@ -65,7 +65,7 @@ def add_intents(model_config, model_dir):
 
 
 def create_intent(intent_name, intents_dir):
-    intent_dir = "{}/{}".format(intents_dir, intent_name)
+    intent_dir = f"{intents_dir}/{intent_name}"
     intent_config = {
         "name": intent_name
     }
@@ -73,7 +73,7 @@ def create_intent(intent_name, intents_dir):
 
     if "slots.json" in intent_config_files:
         intent_config_files.remove("slots.json")
-        with open("{}/slots.json".format(intent_dir), "rb") as f:
+        with open(f"{intent_dir}/slots.json", "rb") as f:
             intent_config["slots"] = json.load(f)
 
     intent_config["samples"] = make_intent_samples(intent_dir, intent_config_files)
@@ -84,7 +84,7 @@ def create_intent(intent_name, intents_dir):
 def make_intent_samples(intent_dir, config_files):
     utterance_set = set()
     for config_file in config_files:
-        with open("{}/{}".format(intent_dir, config_file), "rb") as f:
+        with open(f"{intent_dir}/{config_file}", "rb") as f:
             utterance_configs = json.load(f)
     for utterance_config in utterance_configs:
         utterance_set.update(utterance_config.get("utterances", []))

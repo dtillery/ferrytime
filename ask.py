@@ -17,7 +17,7 @@ class AskCli:
         if self.skill_id:
             cmd.extend(["-s", self.skill_id])
         cmd.extend(["-l", locale or self.locale])
-        cmd.extend(["-t", "alexa {}".format(text)])
+        cmd.extend(["-t", f"alexa {text}"])
         return cmd
 
     def simulate(self, text):
@@ -32,7 +32,7 @@ class AlexaSimulateResponse:
         try:
             self._response = json.loads(process.stdout)
         except json.decoder.JSONDecodeError as e:
-            raise AlexaSimulateError("Could not parse simulate response: \"{}\"".format(process.stdout))
+            raise AlexaSimulateError(f'Could not parse simulate response: "{process.stdout}"')
 
     @property
     def simulation_id(self):
