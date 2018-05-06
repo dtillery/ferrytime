@@ -1,3 +1,5 @@
+import re
+import itertools
 import json
 import os
 
@@ -90,3 +92,19 @@ def make_intent_samples(intent_dir, config_files):
         utterance_set.update(utterance_config.get("utterances", []))
     return list(utterance_set)
 
+
+def render_utterances(template_string):
+    matches = []
+    def sub_for_interpolation(match):
+        options = match.group(1).split("|")
+        if match.group(0).startswith("?"):
+            options.append("")
+        matches.append(options)
+        return "{}"
+
+    # match [...] or ?[...], capture text between brackets
+    pattern = r"\??\[([-a-zA-Z. _'\|]*)\]"
+    base_string = re.sub(pattern, sub_for_interpolation, template_string)
+
+    combinations = [base_string.format(*combo) for combo in itertools.product(*matches)]
+    return [" ".join(string.split()) for string in combinations]
