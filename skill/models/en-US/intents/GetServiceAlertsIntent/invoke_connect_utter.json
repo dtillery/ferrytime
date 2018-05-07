@@ -3,37 +3,37 @@
         "invocation_words": ["ask"],
         "connecting_words": ["for", "about"],
         "utterances": [
-            "?[the] service alerts"
+            "?[the] ?[service] alerts"
         ]
     },
     {
         "invocation_words": ["ask"],
         "connecting_words": ["to"],
         "utterances": [
-            "get its service alerts"
+            "get its ?[service] alerts"
         ]
     },
     {
         "invocation_words": ["ask"],
         "connecting_words": ["if", "whether"],
         "utterances": [
-            "there are ?[any|some] service alerts",
-            "it has ?[any|some] service alerts",
-            "it knows of ?[any] service alerts",
-            "it found ?[any] service alerts",
-            "we have ?[any|some] service alerts"
+            "there are ?[any|some] ?[service] alerts",
+            "it has ?[any|some] ?[service] alerts",
+            "it knows of ?[any] ?[service] alerts",
+            "it found ?[any] ?[service] alerts",
+            "we have ?[any|some] ?[service] alerts"
         ]
     },
     {
         "invocation_words": ["ask"],
         "connecting_words": [],
         "utterances": [
-            "what service alerts are there",
-            "what service alerts there are",
-            "how many service alerts are there",
-            "how many service alerts there are",
-            "which service alerts there are",
-            "which service alerts are there"
+            "what ?[service] alerts are there",
+            "what ?[service] alerts there are",
+            "how many ?[service] alerts are there",
+            "how many ?[service] alerts there are",
+            "which ?[service] alerts there are",
+            "which ?[service] alerts are there"
         ]
     },
     {

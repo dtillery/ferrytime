@@ -2,21 +2,21 @@
     {
         "connecting_words": ["by", "from", "in", "using", "with"],
         "utterances": [
-            "any service alerts",
-            "all service alerts",
-            "are there ?[any|some] service alerts",
-            "get ?[any|all|the] service alerts",
-            "get [me|us] ?[any|all|the] service alerts",
-            "give ?[any|all] service alerts",
-            "give [me|us] ?[any|all] service alerts",
-            "list ?[any|all|the] service alerts",
-            "check [for|if there are] ?[any] service alerts",
-            "tell me ?[about] ?[any|all] service alerts",
+            "any ?[service] alerts",
+            "all ?[service] alerts",
+            "are there ?[any|some] ?[service] alerts",
+            "get ?[any|all|the] ?[service] alerts",
+            "get [me|us] ?[any|all|the] ?[service] alerts",
+            "give ?[any|all] ?[service] alerts",
+            "give [me|us] ?[any|all] ?[service] alerts",
+            "list ?[any|all|the] ?[service] alerts",
+            "check [for|if there are] ?[any] ?[service] alerts",
+            "tell me ?[about] ?[any|all] ?[service] alerts",
             "find ?[any|all] serivce alerts",
-            "search for ?[any|all] service alerts",
-            "I want ?[any|all] service alerts",
-            "I need ?[any|all] service alerts",
-            "I want to know ?[about] ?[any|all] service alerts"
+            "search for ?[any|all] ?[service] alerts",
+            "I want ?[any|all] ?[service] alerts",
+            "I need ?[any|all] ?[service] alerts",
+            "I want to know ?[about] ?[any|all] ?[service] alerts"
         ]
     }
 ]
