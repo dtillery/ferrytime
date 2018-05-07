@@ -8,6 +8,7 @@ from invoke import task
 from ask import AskCli
 
 BASE_MODELS_DIR = "skill/models"
+# match [...] or ?[...], capture text between brackets
 UTTERANCE_TEMPLATE_PATTERN = re.compile(r"\??\[([-a-zA-Z. _'\|]*)\]")
 
 
@@ -25,7 +26,19 @@ def simulate(c, text):
 
 
 @task
-def build_models(c):
+def build_and_deploy(c):
+    build(c)
+    deploy(c)
+
+
+@task
+def deploy(c):
+    with c.cd("skill"):
+        r = c.run("ask deploy")
+
+
+@task
+def build(c):
     models = [model for model in os.listdir(BASE_MODELS_DIR) if os.path.isdir(os.path.join(BASE_MODELS_DIR, model))]
     for model in models:
         build_model(model)
@@ -75,7 +88,7 @@ def create_intent(intent_name, intents_dir):
             intent_config["slots"] = json.load(f)
 
     intent_config["samples"] = make_intent_samples(intent_dir, intent_config_files)
-
+    print(f"Configured {len(intent_config['samples'])} samples for intent {intent_name}")
     return intent_config
 
 
@@ -100,7 +113,6 @@ def render_utterances(template_string):
         matches.append(options)
         return "{}"
 
-    # match [...] or ?[...], capture text between brackets
     base_string = UTTERANCE_TEMPLATE_PATTERN.sub(sub_for_interpolation, template_string)
     combinations = [base_string.format(*combo) for combo in itertools.product(*matches)]
     return [" ".join(string.split()) for string in combinations]
