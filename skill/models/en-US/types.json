@@ -3,9 +3,44 @@
     "name": "Route",
     "values": [
       {
+        "id": "AS",
+        "name": {
+          "value": "Astoria",
+          "synonyms": []
+        }
+      },
+      {
         "id": "ER",
         "name": {
           "value": "East River",
+          "synonyms": []
+        }
+      },
+      {
+        "id": "ERS",
+        "name": {
+          "value": "Midtown Shuttle",
+          "synonyms": []
+        }
+      },
+      {
+        "id": "RES",
+        "name": {
+          "value": "Rockaway East",
+          "synonyms": []
+        }
+      },
+      {
+        "id": "RWS",
+        "name": {
+          "value": "Rockaway West",
+          "synonyms": []
+        }
+      },
+      {
+        "id": "SB",
+        "name": {
+          "value": "South Brooklyn",
           "synonyms": []
         }
       }
