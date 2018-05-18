@@ -17,11 +17,18 @@ class AskCli:
         if self.skill_id:
             cmd.extend(["-s", self.skill_id])
         cmd.extend(["-l", locale or self.locale])
-        cmd.extend(["-t", f"alexa {text}"])
+        cmd.extend(["-t", text])
         return cmd
 
+    def _make_invocation(self, original_text):
+        invocation = original_text.lower().strip()
+        if not invocation.startswith("alexa"):
+            invocation = f"alexa {invocation}"
+        return invocation
+
     def simulate(self, text):
-        cmd = self._make_cmd(text)
+        invocation = self._make_invocation(text)
+        cmd = self._make_cmd(invocation)
         process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, cwd=self.skill_dir)
         return AlexaSimulateResponse(process)
 
