@@ -6,42 +6,54 @@
         "id": "AS",
         "name": {
           "value": "Astoria",
-          "synonyms": []
+          "synonyms": [
+            "a. s."
+          ]
         }
       },
       {
         "id": "ER",
         "name": {
           "value": "East River",
-          "synonyms": []
+          "synonyms": [
+            "e. r."
+          ]
         }
       },
       {
         "id": "ERS",
         "name": {
           "value": "Midtown Shuttle",
-          "synonyms": []
+          "synonyms": [
+            "e. r. s."
+          ]
         }
       },
       {
         "id": "RES",
         "name": {
           "value": "Rockaway East",
-          "synonyms": []
+          "synonyms": [
+            "r. e. s."
+          ]
         }
       },
       {
         "id": "RWS",
         "name": {
           "value": "Rockaway West",
-          "synonyms": []
+          "synonyms": [
+            "r. w. s."
+          ]
         }
       },
       {
         "id": "SB",
         "name": {
           "value": "South Brooklyn",
-          "synonyms": []
+          "synonyms": [
+            "s. b."
+          ]
         }
       }
     ]

@@ -3,7 +3,8 @@
         "invocation_words": ["ask"],
         "connecting_words": ["for", "about"],
         "utterances": [
-            "?[the] ?[service] alerts"
+            "?[the] ?[{Route}] ?[service] alerts",
+            "?[the] ?[service] alerts ?[for|from] [{Route}]"
         ]
     },
     {

@@ -9,7 +9,7 @@ from ask import AskCli
 
 BASE_MODELS_DIR = "skill/models"
 # match [...] or ?[...], capture text between brackets
-UTTERANCE_TEMPLATE_PATTERN = re.compile(r"\??\[([-a-zA-Z. _'\|]*)\]")
+UTTERANCE_TEMPLATE_PATTERN = re.compile(r"\??\[([-a-zA-Z. _'\|{}]*)\]")
 
 
 @task
@@ -105,6 +105,12 @@ def make_intent_samples(intent_dir, config_files):
 
 
 def render_utterances(template_string):
+    """
+    Possible additions for templating:
+        - support expanding contractions (what's => what is)
+        - switching words around (are there => there are)
+        - recursive template (alerts [for ?[then]] ferry)
+    """
     matches = []
     def sub_for_interpolation(match):
         options = match.group(1).split("|")
