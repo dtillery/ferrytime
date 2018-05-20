@@ -10,6 +10,8 @@ from ask import AskCli
 BASE_MODELS_DIR = "skill/models"
 # match [...] or ?[...], capture text between brackets
 UTTERANCE_TEMPLATE_PATTERN = re.compile(r"\??\[([-a-zA-Z. _'\|{}]*)\]")
+# match non-empty curly containers e.g. {Slot}
+ESCAPE_CURLY_PATTERN = re.compile(r"{([^\s]+)}")
 
 
 @task
@@ -120,5 +122,6 @@ def render_utterances(template_string):
         return "{}"
 
     base_string = UTTERANCE_TEMPLATE_PATTERN.sub(sub_for_interpolation, template_string)
+    base_string = re.sub(ESCAPE_CURLY_PATTERN, r"{{\1}}", base_string)
     combinations = [base_string.format(*combo) for combo in itertools.product(*matches)]
     return [" ".join(string.split()) for string in combinations]

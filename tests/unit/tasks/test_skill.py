@@ -77,7 +77,15 @@ def test_render_utterances_template_optional():
         "this test"
     ])
 
-def test_render_utterances_with_slot_simple():
+def test_render_utterances_with_slot():
+    template = "this is [a|the] {slot} test"
+    rendered_strings = skill.render_utterances(template)
+    assert_equalish_lists(rendered_strings, [
+        "this is a {slot} test",
+        "this is the {slot} test"
+    ])
+
+def test_render_utterances_with_slot_in_substitution():
     template = "this is a [{slot}] test"
     rendered_strings = skill.render_utterances(template)
     assert_equalish_lists(rendered_strings, [
@@ -85,13 +93,13 @@ def test_render_utterances_with_slot_simple():
     ])
 
 def test_render_utterances_with_slot_complex():
-    template = "this [is|was] a [dumb|{slot}|weird] test"
+    template = "this {slot} [is|was] a [dumb|{slot}|weird] test"
     rendered_strings = skill.render_utterances(template)
     assert_equalish_lists(rendered_strings, [
-        "this is a dumb test",
-        "this is a {slot} test",
-        "this is a weird test",
-        "this was a dumb test",
-        "this was a {slot} test",
-        "this was a weird test"
+        "this {slot} is a dumb test",
+        "this {slot} is a {slot} test",
+        "this {slot} is a weird test",
+        "this {slot} was a dumb test",
+        "this {slot} was a {slot} test",
+        "this {slot} was a weird test"
     ])
