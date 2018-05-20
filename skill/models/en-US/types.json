@@ -5,8 +5,9 @@
       {
         "id": "AS",
         "name": {
-          "value": "Astoria",
+          "value": "astoria",
           "synonyms": [
+            "astoria ferry",
             "a. s."
           ]
         }
@@ -14,8 +15,9 @@
       {
         "id": "ER",
         "name": {
-          "value": "East River",
+          "value": "east river",
           "synonyms": [
+            "east river ferry",
             "e. r."
           ]
         }
@@ -23,7 +25,7 @@
       {
         "id": "ERS",
         "name": {
-          "value": "Midtown Shuttle",
+          "value": "midtown shuttle",
           "synonyms": [
             "e. r. s."
           ]
@@ -32,8 +34,9 @@
       {
         "id": "RES",
         "name": {
-          "value": "Rockaway East",
+          "value": "rockaway east",
           "synonyms": [
+            "rockaway east ferry",
             "r. e. s."
           ]
         }
@@ -41,8 +44,9 @@
       {
         "id": "RWS",
         "name": {
-          "value": "Rockaway West",
+          "value": "rockaway west",
           "synonyms": [
+            "rockaway west ferry",
             "r. w. s."
           ]
         }
@@ -50,8 +54,9 @@
       {
         "id": "SB",
         "name": {
-          "value": "South Brooklyn",
+          "value": "south brooklyn",
           "synonyms": [
+            "south brooklyn ferry",
             "s. b."
           ]
         }
