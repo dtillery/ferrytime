@@ -4,37 +4,49 @@
         "connecting_words": ["for", "about"],
         "utterances": [
             "?[the] ?[{Route}] ?[service] alerts",
-            "?[the] ?[service] alerts ?[for|from] [{Route}]"
+            "?[the] ?[service] alerts [for|from|in|at|about] ?[the] {Route}"
         ]
     },
     {
         "invocation_words": ["ask"],
         "connecting_words": ["to"],
         "utterances": [
-            "get its ?[service] alerts"
+            "get its ?[{Route}] ?[service] alerts",
+            "get its ?[service] alerts [for|from|in|at|about] ?[the] {Route}"
         ]
     },
     {
         "invocation_words": ["ask"],
         "connecting_words": ["if", "whether"],
         "utterances": [
-            "there are ?[any|some] ?[service] alerts",
-            "it has ?[any|some] ?[service] alerts",
-            "it knows of ?[any] ?[service] alerts",
-            "it found ?[any] ?[service] alerts",
-            "we have ?[any|some] ?[service] alerts"
+            "there are ?[any|some] ?[{Route}] ?[service] alerts",
+            "there are ?[any|some] ?[service] alerts [for|from|in|at|about] ?[the] {Route}",
+            "it has ?[any|some] ?[{Route}] ?[service] alerts",
+            "it has ?[any|some] ?[service] alerts [for|from|in|at|about] ?[the] {Route}",
+            "it knows of ?[any] ?[{Route}] ?[service] alerts",
+            "it knows of ?[any] ?[service] alerts [for|from|in|at|about] ?[the] {Route}",
+            "it found ?[any] ?[{Route}] ?[service] alerts",
+            "it found ?[any] ?[service] alerts [for|from|in|at|about] ?[the] {Route}",
+            "we have ?[any|some] ?[{Route}] ?[service] alerts",
+            "we have ?[any|some] ?[service] alerts [for|from|in|at|about] ?[the] {Route}"
         ]
     },
     {
         "invocation_words": ["ask"],
         "connecting_words": [],
         "utterances": [
-            "what ?[service] alerts are there",
-            "what ?[service] alerts there are",
-            "how many ?[service] alerts are there",
-            "how many ?[service] alerts there are",
-            "which ?[service] alerts there are",
-            "which ?[service] alerts are there"
+            "what ?[{Route}] ?[service] alerts are there",
+            "what ?[service] alerts are there [for|from|in|at|about] ?[the] {Route}",
+            "what ?[{Route}] ?[service] alerts there are",
+            "what ?[service] alerts there are [for|from|in|at|about] ?[the] {Route}",
+            "how many ?[{Route}] ?[service] alerts are there",
+            "how many ?[service] alerts are there [for|from|in|at|about] ?[the] {Route}",
+            "how many ?[{Route}] ?[service] alerts there are",
+            "how many ?[service] alerts there are [for|from|in|at|about] ?[the] {Route}",
+            "which ?[{Route}] ?[service] alerts there are",
+            "which ?[service] alerts there are [for|from|in|at|about] ?[the] {Route}",
+            "which ?[{Route}] ?[service] alerts are there",
+            "which ?[service] alerts are there [for|from|in|at|about] ?[the] {Route}"
         ]
     },
     {
