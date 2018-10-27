@@ -35,8 +35,7 @@ Response: Service Alerts Intent Response
 Start a pipenv shell session via `pipenv shell`
 
 ### Lambda
-1. `cd lambda`
-1. `sls deploy -v`
+`inv lambda.deploy`
 
 ### Skill
 `inv skill.build-and-deploy`
