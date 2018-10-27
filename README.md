@@ -8,12 +8,28 @@
 1. Install python 3.6+ (managed using [pyenv](https://github.com/pyenv/pyenv), for example)
 1. Install [Pipenv](https://pipenv.readthedocs.io/en/latest/) and run `pipenv install`
 
-## Test
+## Testing
 Start a pipenv shell session via `pipenv shell`
 
+### Unit Tests
 ```
 py.test -v tests/
 ```
+
+### Simulating Alexa Responses
+You can run a simulation of a command against the deployed skill/lambda. This is run
+via the Alexa Skills Kit simulate. The start word "Alexa" is automatically prepended.
+
+```
+inv skill.simulate "ask ferry time for east river ferry service alerts"
+
+=== Simulating: "ask ferry time for east river ferry service alerts"
+=== Simulation Results:
+Intent: GetServiceAlertsIntent
+Slots: {'Route': {'value': 'east river ferry', 'matched_id': 'ER', 'matched_name': 'east river'}}
+Response: Service Alerts Intent Response
+```
+
 
 ## Deployment
 Start a pipenv shell session via `pipenv shell`
