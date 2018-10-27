@@ -29,7 +29,7 @@ class AskCli:
     def simulate(self, text):
         invocation = self._make_invocation(text)
         cmd = self._make_cmd(invocation)
-        # print(f"Invoking simulate with \"{' '.join(cmd)}\"")
+        print(f"Simulating with \"{' '.join(cmd)}\"")
         process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, cwd=self.skill_dir)
         return AlexaSimulateResponse(process)
 
