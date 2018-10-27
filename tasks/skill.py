@@ -25,6 +25,7 @@ def simulate(c, text):
         print("=== Simulation Results:")
         print(f"Intent: {r.intent.name}")
         print(f"Slots: {r.intent.slots}")
+        print(f"Response: {r.text}")
 
 
 @task
@@ -36,7 +37,7 @@ def build_and_deploy(c):
 @task
 def deploy(c):
     with c.cd("skill"):
-        r = c.run("ask deploy")
+        r = c.run("ask deploy", pty=True)
 
 
 @task

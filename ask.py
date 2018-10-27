@@ -29,6 +29,7 @@ class AskCli:
     def simulate(self, text):
         invocation = self._make_invocation(text)
         cmd = self._make_cmd(invocation)
+        # print(f"Invoking simulate with \"{' '.join(cmd)}\"")
         process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, cwd=self.skill_dir)
         return AlexaSimulateResponse(process)
 
@@ -40,6 +41,10 @@ class AlexaSimulateResponse:
             self._response = json.loads(process.stdout)
         except json.decoder.JSONDecodeError as e:
             raise AlexaSimulateError(f'Could not parse simulate response: "{process.stdout}"')
+
+    @property
+    def text(self):
+        return self.invocation_response.get("body", {}).get("response", {}).get("outputSpeech", {}).get("text")
 
     @property
     def simulation_id(self):
@@ -58,8 +63,16 @@ class AlexaSimulateResponse:
         return not self.successful and self._result.get("error", {}).get("message") or None
 
     @property
+    def _skill_execution_info(self):
+        return self._result.get("skillExecutionInfo", {})
+
+    @property
     def invocation_request(self):
-        return self._result.get("skillExecutionInfo", {}).get("invocationRequest", {})
+        return self._skill_execution_info.get("invocationRequest", {})
+
+    @property
+    def invocation_response(self):
+        return self._skill_execution_info.get("invocationResponse", {})
 
     @property
     def intent(self):
