@@ -13,13 +13,18 @@ def fallback(slots, context):
 
 @app.intent("GetServiceAlertsIntent")
 def service_alert(slots, context):
-    print("server_alert intent slots are:")
-    print(event)
+    route = slots.get("Route")
+    if not route:
+        response = "Did not get any Route information from request."
+    elif route.is_empty:
+        response = "Did not match to Route slot."
+    elif not route.is_match:
+        response = f"Do not recognize route {route.original_value}."
+    else:
+        response = f"Getting alerts for route {route.matched_value}."
 
-    return alexandra.respond("Service Alerts Intent Response")
+    return alexandra.respond(response)
 
 
 def dispatch(event, context):
-    print("Dispatch event is:")
-    print(event)
     return app.dispatch_request(event)

@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "ferry time",
+      "invocationName": "water bus",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
